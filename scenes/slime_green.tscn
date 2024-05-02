@@ -45,8 +45,9 @@ size = Vector2(10, 12)
 
 [node name="SlimeGreen" type="Node2D"]
 script = ExtResource("1_q4yn3")
+metadata/_edit_vertical_guides_ = [12.0, -10.0]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="SlimeSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_oyicj")
 autoplay = "default"
@@ -56,3 +57,11 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_vbp1c")
+
+[node name="RayCastR" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(10, 0)
+
+[node name="RayCastL" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(-10, 0)

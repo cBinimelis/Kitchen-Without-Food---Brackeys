@@ -11,15 +11,17 @@ public partial class killzone : Area2D
     }
 
     private void OnBodyEntered(PhysicsBody2D body){
-        body.GetNode<AnimatedSprite2D>("AnimatedSprite2D").Stop();
-        body.Dispose();
+        body.GetNode<AnimatedSprite2D>("playerSprite").Stop();
+        body.GetNode("CollisionShape2D").QueueFree();
 
         GD.PrintRich("[shake]GAME OVER[/shake]");
+        Engine.TimeScale= 0.5;
         _timer.Start();
     }
 
     private void OnTimeout(){
         GetTree().ReloadCurrentScene();
+        Engine.TimeScale=1;
     }
     
 }
