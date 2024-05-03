@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2w10wwf0ngtx"]
+[gd_scene load_steps=16 format=3 uid="uid://c2w10wwf0ngtx"]
 
 [ext_resource type="PackedScene" uid="uid://cdn7baljbdyjr" path="res://scenes/player.tscn" id="1_j440t"]
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_vouaa"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://8jpmt6lonhh8" path="res://scenes/killzone.tscn" id="4_yxtxj"]
 [ext_resource type="PackedScene" uid="uid://d2ory1frn3qdk" path="res://scenes/slime_green.tscn" id="6_6ctyg"]
 [ext_resource type="FontFile" uid="uid://dixbe288dm2f6" path="res://assets/fonts/PixelOperator8.ttf" id="7_epqt1"]
+[ext_resource type="FontFile" uid="uid://doec83wrqf4c7" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_0c2dj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g8t56"]
 texture = ExtResource("2_d5563")
@@ -459,6 +460,17 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_vouaa")
 
+[node name="scoreLabel" type="Label" parent="GameManager"]
+offset_left = 895.0
+offset_top = -154.0
+offset_right = 1157.0
+offset_bottom = -134.0
+theme_override_colors/font_color = Color(0.0784314, 0.596078, 0.862745, 1)
+theme_override_fonts/font = ExtResource("7_epqt1")
+theme_override_font_sizes/font_size = 8
+text = "You collected X coins."
+horizontal_alignment = 1
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wy60l")
 format = 2
@@ -545,12 +557,12 @@ theme_override_font_sizes/font_size = 8
 text = "Space to Jump"
 
 [node name="Label2" type="Label" parent="Labels"]
-offset_left = 907.0
+offset_left = 892.0
 offset_top = -176.0
-offset_right = 1143.0
+offset_right = 1164.0
 offset_bottom = -156.0
 theme_override_colors/font_color = Color(0.0784314, 0.596078, 0.862745, 1)
-theme_override_fonts/font = ExtResource("7_epqt1")
+theme_override_fonts/font = ExtResource("9_0c2dj")
 theme_override_font_sizes/font_size = 16
 text = "CONGRATULATIONS!!!"
 
